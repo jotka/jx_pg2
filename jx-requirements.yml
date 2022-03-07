@@ -17,16 +17,20 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: jotka
+    repository: jx_pg2
   - key: staging
   - key: production
   ingress:
-    domain: ""
-    externalDNS: false
+    domain: 40.70.170.17.nip.io
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: jotka
   repository: bucketrepo
   secretStorage: local
   vault: {}
